@@ -25,10 +25,9 @@ class Program
             host = hostinput; 
         }
 
-
+        Console.Write("Test süresi girin (dk): ");
         while (true)
         {
-            Console.Write("Test süresi girin (dk): ");
             string durationInput = Console.ReadLine();
 
             if (int.TryParse(durationInput, out durationInMinutes) && durationInMinutes > 0)
@@ -37,14 +36,13 @@ class Program
             }
             else
             {
-                Console.WriteLine("Geçerli bir pozitif tam sayı girin.");
+                Console.Write("Geçerli bir pozitif tam sayı girin: ");
             }
         }
 
-
+        Console.Write("Ping atma aralığı girin (sn): ");
         while (true)
         {
-            Console.Write("Ping atma aralığı girin (sn): ");
             string intervalInput = Console.ReadLine();
 
             if (int.TryParse(intervalInput, out intervalInSeconds) && intervalInSeconds > 0)
@@ -53,7 +51,7 @@ class Program
             }
             else
             {
-                Console.WriteLine("Geçerli bir pozitif tam sayı girin.");
+                Console.Write("Geçerli bir pozitif tam sayı girin: ");
             }
         }
 
